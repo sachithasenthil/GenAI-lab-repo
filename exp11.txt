@@ -1,0 +1,43 @@
+AIM
+To develop an integrated AI-based content generation system that produces text, image and audio content from a
+single high-level user input.
+OBJECTIVE
+
+To understand how multiple generative models — an LLM for text, a diffusion model for images, and a text-to-
+speech model for audio — can be orchestrated together to build an end-to-end multimedia content-generation
+
+pipeline.
+SOFTWARE REQUIREMENTS
+• Python 3.9 or above
+• transformers, diffusers, gTTS (or a TTS model) libraries
+• Pre-trained models: gpt2 / flan-t5 (text), stable-diffusion-v1-5 (image), gTTS (audio)
+• Jupyter Notebook / VS Code, GPU recommended for image generation
+THEORY
+AI-based content generation systems automate the creation of blog posts, social-media captions, marketing images,
+and narrated audio by chaining together multiple generative models, each specialised for one modality. A pipeline
+approach is typically used: the LLM first generates textual content (e.g., a short article or caption) from a topic; that
+generated text (or a derived prompt) is then passed to an image-generation model to create matching visuals; finally,
+a text-to-speech (TTS) model converts the generated text into narrated audio.
+Such orchestration requires careful prompt design at each stage so that the output of one model becomes a coherent
+input for the next, and demonstrates how foundation models across modalities can be composed into practical
+multimedia-content workflows used in marketing, education, and social media automation.
+ALGORITHM
+1. Accept a high-level topic/theme from the user.
+2. Use a text-generation LLM to produce a short article/caption on the topic.
+3. Derive an image prompt from the generated text.
+4. Use a diffusion model to generate an accompanying image from the image prompt.
+5. Convert the generated text into speech using a text-to-speech model.
+6. Save/display the generated text, image, and audio as the final multimedia content package.
+SAMPLE INPUT
+topic = "The benefits of renewable energy"
+SAMPLE OUTPUT
+Generated Text:
+Renewable energy sources like solar and wind reduce carbon emissions,
+lower energy costs over time, and help create a sustainable future for
+generations to come.
+Image saved as content_image.png
+Audio saved as content_audio.mp3
+
+RESULT
+An integrated AI-based content generation system producing text, image, and audio outputs from a single topic
+input was successfully developed.
